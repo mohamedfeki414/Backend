@@ -29,10 +29,7 @@ public class ProductController {
     private ProductDao productDao;
 
     
-    @GetMapping("/Produits")
-    public List<Produit> listeProduits() {
-        return productDao.findAll(); 
-    }
+   
 
    
     @GetMapping("/Produits/{id}")
