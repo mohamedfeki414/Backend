@@ -36,7 +36,7 @@ public class ProductController {
 
    
     @GetMapping("/Produits/{id}")
-    public Optional<Produit> afficherUnProduit(@PathVariable("id") int id) {
+    public Optional<Produit> afficherUnProduit(@PathVariable int id) {
         return  Optional.ofNullable(productDao.findById(id)
         		.orElseThrow(()->new NoSuchElementFoundException("id not found"))); 
        
