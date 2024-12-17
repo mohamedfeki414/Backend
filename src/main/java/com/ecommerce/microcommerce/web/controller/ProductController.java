@@ -15,16 +15,7 @@ import com.ecommerce.microcommerce.web.dao.ProductDao;
 @RestController
 public class ProductController {
 	
-	@ExceptionHandler(NoSuchElementFoundException.class)
-	@ResponseStatus(HttpStatus.NOT_FOUND)
-	public ResponseEntity<String>handleNoSushElementFoundException(
-			NoSuchElementFoundException exception
-			){
-		return ResponseEntity
-				.status(HttpStatus.NOT_FOUND)
-				.body(exception.getMessage());
-	}
-
+	
     @Autowired
     private ProductDao productDao;
 
